@@ -1,0 +1,45 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?86a33c32523886afa9f21503731e2b30") format("truetype"),
+url("./flaticon.woff?86a33c32523886afa9f21503731e2b30") format("woff"),
+url("./flaticon.woff2?86a33c32523886afa9f21503731e2b30") format("woff2"),
+url("./flaticon.eot?86a33c32523886afa9f21503731e2b30#iefix") format("embedded-opentype"),
+url("./flaticon.svg?86a33c32523886afa9f21503731e2b30#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "blog": "\f101",
+    "profile-user": "\f102",
+    "home": "\f103",
+    "curriculum-vitae": "\f104",
+    "contact": "\f105",
+);
+
+.flaticon-blog:before {
+    content: map-get($flaticon-map, "blog");
+}
+.flaticon-profile-user:before {
+    content: map-get($flaticon-map, "profile-user");
+}
+.flaticon-home:before {
+    content: map-get($flaticon-map, "home");
+}
+.flaticon-curriculum-vitae:before {
+    content: map-get($flaticon-map, "curriculum-vitae");
+}
+.flaticon-contact:before {
+    content: map-get($flaticon-map, "contact");
+}
